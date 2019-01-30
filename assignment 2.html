@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>calculation</title>
+<style>
+#container
+{
+ display:flex;
+ justifycenter:center;
+ align-item:center;
+}
+#center
+{
+ display:block;
+ padding:20px 0;
+ border:3px solid black;
+ margin-top:20%;
+ margin-left:30%;
+ margin-right:30%;
+ margin-bottom:20%;
+ text-align:center;
+ background:#8391aa;
+}
+
+</style>
+</head>
+<div id="container">
+<body>
+<script>
+var a,b,c;
+function add()
+{
+ a=Number(document.getElementById("a").value);
+ b=Number(document.getElementById("b").value);
+ c=a+b;
+ document.getElementById("c").value=c;
+ }
+function subtract()
+{
+ a=Number(document.getElementById("a").value);
+ b=Number(document.getElementById("b").value);
+ c=a-b;
+ document.getElementById("c").value=c;
+ }
+function multiply()
+{
+ a=Number(document.getElementById("a").value);
+ b=Number(document.getElementById("b").value);
+ c=a*b;
+ document.getElementById("c").value=c;
+ }
+function divide()
+{
+ a=Number(document.getElementById("a").value);
+ b=Number(document.getElementById("b").value);
+ if(b==0)
+{
+alert("denominator cannot be zero");
+}
+else
+{
+c=a/b;
+ document.getElementById("c").value=c;
+}
+ }
+</script>
+<div id="center">
+<pre>
+ENTER FIRST NUMBER :<input type="text" id="a">
+ENTER SECOND NUMBER:<input type="text" id="b">
+
+RESULT IS          :<input type="text" id="c"readonly>
+</pre>
+<input type="submit" value="ADD" onclick="add()">
+<input type="submit" value="SUBTRACT"onclick="subtract()">
+<input type="submit" value="MULTIPLY"onclick="multiply()">
+<input type="submit" value="DIVIDE"onclick="divide()">
+</div>
+</body>
+</div>
+</html>
